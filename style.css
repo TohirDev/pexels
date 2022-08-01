@@ -8,6 +8,15 @@
     outline: none;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2FA082;
+    border-radius: 30px;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     height: 100vh;
@@ -82,10 +91,15 @@ header .input-section .btn:active {
     margin: 20px;
 }
 
-.image img {
+.image .img {
     width: 350px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.image .img:hover image .img::after {
+    content: 'Click to zoom';
+    color: red;
 }
 
 .author {
@@ -104,4 +118,30 @@ header .input-section .btn:active {
     display: block;
     font-size: 30px;
     margin-bottom: 13px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .88);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .m-img {
+    width: 500px;
+    border-radius: 10px;
+}
+
+.modal .cross {
+    font-size: 70px;
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    cursor: pointer;
+    right: 100px;
 }

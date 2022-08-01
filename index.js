@@ -43,7 +43,23 @@ function displayImg(res) {
     image.className = "image";
     let img = d("img");
     img.className = "img";
-    img.setAttribute("src", `${e.src.medium}`);
+    img.setAttribute("src", `${e.src.portrait}`);
+    img.addEventListener('click', () => {
+        let modal = d('div')
+        modal.className = 'modal'
+        let cross = d('div')
+        cross.className = 'cross'
+        cross.innerText = 'X'
+        cross.addEventListener('click', () => {
+            modal.style.display = 'none'
+        })
+        let imgM = d("img");
+        imgM.className = "m-img";
+        imgM.setAttribute("src", `${e.src.portrait}`);
+        modal.appendChild(cross)
+        modal.appendChild(imgM)
+        document.body.appendChild(modal)
+    })
     let a = d("a");
     a.className = "author";
     a.setAttribute("href", `${e.photographer_url}`);
@@ -53,6 +69,7 @@ function displayImg(res) {
     p.innerText = `${e.photographer}`;
     let span = d("span");
     span.className = "photo";
+    span.innerText = '📷'
     a.appendChild(p);
     a.appendChild(span);
     image.appendChild(img);
