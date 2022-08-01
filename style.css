@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 130px;
+}
+
+header img {
+    width: 250px;
+}
+
+header .input-section {
+    display: flex;
+    align-items: center;
+}
+
+header .input {
+    width: 400px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: .3s ease;
+}
+
+header .input:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+header .input i {
+    font-size: 30px;
+    color: #2FA082;
+}
+
+header .input input {
+    padding: 10px 10px 10px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+header .input-section .btn {
+    padding: 20px 20px;
+    margin-left: 20px;
+    background-color: #2FA082;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header .input-section .btn:active {
+    transform: scale(.98);
+}
+
+.images {
+    width: 1650px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+}
+
+.image {
+    margin: 20px;
+}
+
+.image img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.author .creator {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.author .photo {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 13px;
+}
